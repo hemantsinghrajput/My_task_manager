@@ -40,7 +40,7 @@ const Tasks = () => {
 
   const handleCheckStatus = async (id, currentStatus) => {
     try {
-      const res = await fetch(`/api/tasks/${id}`, {
+      const res = await fetch(`https://my-task-manager-ns00.onrender.com/api/tasks/${id}`, {
         method: 'post',
         headers: { "Content-Type": "application/json", "accept": "application/json", Authorization: authState.token },
         body: JSON.stringify({ completed: !currentStatus })
